@@ -8,16 +8,17 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
  
 const App = () => {
+    useEffect(()=>{
+ 
+     LoadCart();
+   },[]);
    const[cart, setCart]=useState([]);
         const LoadCart=async ()=>{
         const response=await axios.get('/api/cart-items?expand=product');
         setCart(response.data);
       
         }
-   useEffect(()=>{
- 
-     LoadCart();
-   },[]);
+
   return (
     <Routes>
       <Route index element={<HomePage cart={cart} LoadCart={LoadCart}/>}/> 
