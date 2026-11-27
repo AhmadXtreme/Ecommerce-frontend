@@ -1,16 +1,28 @@
-# React + Vite
+# Ecommerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + Vite frontend with an Express + SQLite backend.
+Built while following the SuperSimpleDev ecommerce tutorial, with my own
+additions (quantity update, Vitest tests).
 
-Currently, two official plugins are available:
+## Folders
+- `backend/`: Express API (runs on http://localhost:3000)
+- root: React frontend (runs on http://localhost:5173)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How to run
+Open two terminals.
 
-## React Compiler
+Backend (needs Node 22+):
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    cd backend
+    npm install
+    npm run dev
 
-## Expanding the Oxlint configuration
+Frontend:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+    npm install
+    npm run dev
+
+Then open http://localhost:5173
+
+## Credits
+Backend provided with the SuperSimpleDev ecommerce tutorial (public repository).
